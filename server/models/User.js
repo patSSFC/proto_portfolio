@@ -10,4 +10,4 @@ const UserSchema = new Schema({
 
 const User = mongoose.model('User', UserSchema);
 
-console.log("loaded user model!");
+console.log("loaded user model!!");
