@@ -1,0 +1,23 @@
+{
+  "name": "prototype_portfolio",
+  "version": "1.0.0",
+  "description": "Scalable/CMS portfolio project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio",
+    "prototype",
+    "wireframe",
+    "project"
+  ],
+  "author": "Pat Yolian/Omri Mor",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.2",
+    "path": "^0.12.7"
+  }
+}
