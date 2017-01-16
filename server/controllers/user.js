@@ -8,6 +8,12 @@ module.exports = {
     signup: function(req, res) {
         console.log("inside user controller " + req.body);
         let newUser = new User(req.body);
-        newUser.save()
+        newUser.save(function(err) {
+            if(err) {
+                res.status(500).json(err);
+            } else {
+                res.status(200).json({user: newUser, message: "Your Account was Created!"});
+            }
+        });
     }
 }
