@@ -5,7 +5,19 @@ const UserSchema = new Schema({
     username: {type: String, required: true, minlength: 1},
     description: {type: String, maxlength: 250},
     _projects: [{type: Schema.Types.ObjectId, ref: 'Project'}],
-    skills: [{type: String, minlength: 1}]
+    skills: [{type: String, minlength: 1}],
+    password: {
+        type: String,
+        required: true,
+        minlength: 8,
+        maxlength: 32,
+        validate: {
+          validator: function( value ) {
+            return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,32}/.test( value );
+          },
+          message: "Password failed validation, you must have at least 1 number, uppercase and special character"
+        }
+  }
 });
 
 const User = mongoose.model('User', UserSchema);

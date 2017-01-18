@@ -9,6 +9,5 @@ angular.module('mainApp').factory('signupFactory', function($http) {
                 console.log(err);
             })
     }
-
     return factory;
 });
