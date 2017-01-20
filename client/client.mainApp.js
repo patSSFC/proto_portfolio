@@ -14,7 +14,8 @@ angular.module('mainApp', ['ngRoute'])
             })
             .when('/skills', {
               templateUrl: '../partials/partials.skills.html',
-              controller: ''
+              controller: 'skillsCtrl',
+              controllerAs: 'vm'
             })
             .otherwise({
                 redirectTo: '/signup'
