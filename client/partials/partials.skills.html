@@ -1,0 +1,23 @@
+<div class="form-container">
+  {{vm.test}}
+  <fieldset>
+    Skill:
+    <select name="skills" ng-model="vm.skill.skillName">
+        <option value="">Select a skill</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">Javascript</option>
+        <option value="angular">Angular</option>
+    </select>
+    Years: <input type="text" name="years" value="" ng-model="vm.skill.years">
+    Stars:
+    <select name="stars" ng-model="vm.skill.stars">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <button type="button" ng-click="vm.createSkill()">Add skill</button>
+  </fieldset>
+</div>

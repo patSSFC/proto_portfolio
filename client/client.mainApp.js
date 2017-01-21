@@ -15,6 +15,11 @@ angular.module('mainApp', ['ngRoute'])
             .when('/dashboard', {
                 templateUrl: '../partials/partials.dashboard.html'
             })
+            .when('/skills', {
+              templateUrl: '../partials/partials.skills.html',
+              controller: 'skillsCtrl',
+              controllerAs: 'vm'
+            })
             .otherwise({
                 redirectTo: '/login'
             });
