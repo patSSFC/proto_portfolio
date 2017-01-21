@@ -2,6 +2,8 @@ angular.module('mainApp').factory('skillsFactory', function($http) {
     var factory = this;
 
     // creating an array of all skill types
+    factory.numbers = [{count: 1}, {count: 2}, {count: 3}];
+
     factory.data = [{
         name: 'HTML',
         type: null
