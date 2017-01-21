@@ -1,4 +1,4 @@
-angular.module('mainApp').factory('signupFactory', function($http) {
+angular.module('mainApp').factory('userFactory', function($http) {
     var factory = this;
 
     factory.createUser = function(data) {
