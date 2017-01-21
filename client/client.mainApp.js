@@ -4,15 +4,18 @@ angular.module('mainApp', ['ngRoute'])
         $routeProvider
             .when('/login', {
                 templateUrl: '../partials/partials.login.html',
-                controller: 'loginCtrl',
+                controller: 'userCtrl',
                 controllerAs: 'vm'
             })
             .when('/signup', {
                 templateUrl: '../partials/partials.signup.html',
-                controller: 'signupCtrl',
+                controller: 'userCtrl',
                 controllerAs: 'vm'
             })
+            .when('/dashboard', {
+                templateUrl: '../partials/partials.dashboard.html'
+            })
             .otherwise({
-                redirectTo: '/signup'
+                redirectTo: '/login'
             });
 });
