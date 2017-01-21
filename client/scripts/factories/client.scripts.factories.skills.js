@@ -24,6 +24,6 @@ angular.module('mainApp').factory('skillsFactory', function($http) {
             }, function(err) {
               console.log(err);
             })
-    }
+    };
     return factory;
 });

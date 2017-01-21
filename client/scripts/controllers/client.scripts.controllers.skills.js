@@ -8,5 +8,5 @@ angular.module('mainApp').controller( 'skillsCtrl', function($scope, skillsFacto
         console.log(vm.skill);
         skillsFactory.createSkill(vm.skill);
     };
-    console.log(factory.data);
+    console.log(skillsFactory.data);
 });
