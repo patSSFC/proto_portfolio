@@ -8,7 +8,11 @@ module.exports = function(app) {
         // console.log(req.body);
         user.signup(req, res);
     });
-
+    app.get('/login/:username', function(req, res) {
+        console.log("inside /login GET route");
+        console.log(req.params);
+        user.login(req, res);
+    });
     app.post('/skills', function(req, res) {
       console.log("inside /skills POST route!");
       console.log(req.body);

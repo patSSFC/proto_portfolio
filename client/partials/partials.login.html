@@ -1,6 +1,8 @@
 <div class="form-container login">
+    <h1>Login</h1>
     <fieldset>
-        Username: <input type="text" name="username" value="">
-        Password: <input type="password" name="password" value="">
+        Username: <input type="text" name="username" ng-model="vm.user.username">
+        <!-- Password: <input type="password" name="password" ng-model="vm.user"> -->
+        <button type="button" name="button" ng-click="vm.loginUser()">Login</button>
     </fieldset>
 </div>
