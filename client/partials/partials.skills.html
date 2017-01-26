@@ -1,8 +1,17 @@
 <div class="form-container">
   {{vm.test}}
+  <!-- {{vm.data}} -->
+  <div>
+    <md-autocomplete placeholder="Search for a skill" md-selected-item="selectedItem" md-search-text="searchText" md-items="skill in vm.data" md-item-text="skill.name">
+      <span md-highlight-text="searchText">{{skill.name}}</span>
+    </md-autocomplete>
+    <md-not-found>
+      No matches found.
+    </md-not-found>
+  <div>
   <fieldset>
     Skill:
-    <select name="skills" ng-model="vm.skill.skillName">
+    <select name="skillSelect" ng-model="vm.skill.skillName">
         <option value="">Select a skill</option>
         <option value="html">HTML</option>
         <option value="css">CSS</option>
