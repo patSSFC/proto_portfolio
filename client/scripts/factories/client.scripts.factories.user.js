@@ -1,22 +1,22 @@
 angular.module('mainApp').factory('userFactory', function($http) {
     var factory = this;
 
-    factory.createUser = function(data) {
+    factory.createUser = function(data, callback) {
         $http.post('/signup', data)
             .then(function(response) {
-                console.log(response);
+                callback(response);
             }, function(err) {
-                console.log(err);
-            })
+                callback(err);
+            });
     }
 
-    factory.findUser = function (data) {
+    factory.findUser = function (data, callback) {
         console.log("value pass to factory " + data);
         $http.get('/login/'+ data)
             .then(function(response) {
-                console.log(response);
+                callback(response);
             }, function(err) {
-                console.log(err);
+                callback(err);
             });
     }
     return factory;

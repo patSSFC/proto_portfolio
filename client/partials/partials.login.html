@@ -5,4 +5,5 @@
         <!-- Password: <input type="password" name="password" ng-model="vm.user"> -->
         <button type="button" name="button" ng-click="vm.loginUser()">Login</button>
     </fieldset>
+    <h2 ng-show="vm.error">Error {{vm.error.message}} Please <a ng-click="vm.redir()">Sign Up</a> for an account</h2>
 </div>
