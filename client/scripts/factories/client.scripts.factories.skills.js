@@ -1,12 +1,50 @@
 angular.module('mainApp').factory('skillsFactory', function($http) {
     var factory = this;
 
-    var skill_type = ['HTML', 'CSS', 'Vanilla', 'Sass', 'LESS', 'JavaScript', 'jQuery', 'Node.js', 'AngularJS', 'React', 'Vue.js', 'D3.js', 'Ruby', 'Ruby on Rails', 'Rack', 'Sinatra', 'Padrino', 'Cramp', 'Cuba', 'Merb', 'Camping', 'Hobo', 'Ramaze', 'raptor', 'pakyow', 'Renee', 'Rango', 'Scorched', 'lattice', 'Harbor', 'vanilla', 'marley', 'Bats', 'Espresso', 'strelka', 'salad', 'gin'];
+    var skill_names = {
+      name: 'HTML',
+      name: 'CSS',
+      name: 'Vanilla',
+      name: 'Sass',
+      name: 'LESS',
+      name: 'JavaScript',
+      name: 'jQuery',
+      name: 'Node.js',
+      name: 'AngularJS',
+      name: 'React',
+      name: 'Vue.js',
+      name: 'D3.js',
+      name: 'Ruby',
+      name: 'Ruby on Rails',
+      name: 'Rack',
+      name: 'Sinatra',
+      name: 'Padrino',
+      name: 'Cramp',
+      name: 'Cuba',
+      name: 'Merb',
+      name: 'Camping',
+      name: 'Hobo',
+      name: 'Ramaze',
+      name: 'raptor',
+      name: 'pakyow',
+      name: 'Renee',
+      name: 'Rango',
+      name: 'Scorched',
+      name: 'lattice',
+      name: 'Harbor',
+      name: 'vanilla',
+      name: 'marley',
+      name: 'Bats',
+      name: 'Espresso',
+      name: 'strelka',
+      name: 'salad',
+      name: 'gin'
+    };
 
     // creating an array of all skill types
     factory.numbers = [{count: 1}, {count: 2}, {count: 3}];
 
-    factory.data = skill_type;
+    factory.data = skill_names;
 
 
 
