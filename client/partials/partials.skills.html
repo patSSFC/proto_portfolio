@@ -1,22 +1,12 @@
 <div class="form-container">
   {{vm.test}}
   <!-- {{vm.data}} -->
-  <div>
-    <md-autocomplete placeholder="Search for a skill" md-selected-item="selectedItem" md-search-text="searchText" md-items="name in vm.data" md-item-text="vm.data" md-select-on-match="true">
-      <span md-highlight-text="searchText">{{vm.data.name}}</span>
-    </md-autocomplete>
-    <md-not-found>
-      No matches found.
-    </md-not-found>
-  <div>
+
   <fieldset>
     Skill:
-    <select name="skillSelect" ng-model="vm.skill.skillName">
-        <option value="">Select a skill</option>
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="javascript">Javascript</option>
-        <option value="angular">Angular</option>
+    <select required name="skillSelect" ng-model="vm.skill.skillName">
+      <option value="" disabled selected>Select a skill...</option>
+      <option ng-repeat="type in vm.data" value="{{type}}">{{type}}</option>
     </select>
     Years: <input type="text" name="years" value="" ng-model="vm.skill.years">
     Stars:
@@ -29,4 +19,6 @@
     </select>
     <button type="button" ng-click="vm.createSkill()">Add skill</button>
   </fieldset>
+  <ul name="displayedSkills">My Skills:</ul>
+    <li ng-repeat="skill in vm.skillsArray track by $index">{{skill.skillName}}, {{skill.years}},{{skill.stars}}</li>
 </div>
