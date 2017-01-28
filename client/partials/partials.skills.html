@@ -2,8 +2,8 @@
   {{vm.test}}
   <!-- {{vm.data}} -->
   <div>
-    <md-autocomplete placeholder="Search for a skill" md-selected-item="selectedItem" md-search-text="searchText" md-items="skill in vm.data" md-item-text="vm.data.skill">
-      <span md-highlight-text="searchText">{{vm.data.skill}}</span>
+    <md-autocomplete placeholder="Search for a skill" md-selected-item="selectedItem" md-search-text="searchText" md-items="name in vm.data" md-item-text="vm.data" md-select-on-match="true">
+      <span md-highlight-text="searchText">{{vm.data.name}}</span>
     </md-autocomplete>
     <md-not-found>
       No matches found.
