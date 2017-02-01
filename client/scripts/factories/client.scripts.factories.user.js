@@ -11,13 +11,12 @@ angular.module('mainApp').factory('userFactory', function($http) {
     }
 
     factory.findUser = function (data, callback) {
-        console.log("value pass to factory " + data);
         $http.get('/login/'+ data)
             .then(function(response) {
-                callback(response);
+                factory.user = response.data.user                callback(response);
             }, function(err) {
                 callback(err);
             });
     }
-    return factory;
+
 });

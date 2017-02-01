@@ -2,6 +2,7 @@ angular.module('mainApp').controller('userCtrl', function($scope, $location, use
     var vm = this;
 
     console.log("loaded signupCtrl");
+    vm.user=userFactory.user;
     vm.redir = function() {
         $location.path("/signup");
     };
@@ -10,13 +11,13 @@ angular.module('mainApp').controller('userCtrl', function($scope, $location, use
     }
 
     vm.loginUser = function() {
-        console.log(vm.user.username);
         userFactory.findUser(vm.user.username, responseHandler);
     }
 
     function responseHandler(res) {
         console.log(res);
         if(res.status === 200) {
+            vm.user = userFactory.user
             $location.path('/dashboard');
         } else {
             vm.error = res.data;
