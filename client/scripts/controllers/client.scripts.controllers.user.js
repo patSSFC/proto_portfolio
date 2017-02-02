@@ -18,7 +18,7 @@ angular.module('mainApp').controller('userCtrl', function($scope, $location, use
         console.log(res);
         if(res.status === 200) {
             vm.user = userFactory.user
-            $location.path('/dashboard');
+            $location.path('/projects');
         } else {
             vm.error = res.data;
         }
