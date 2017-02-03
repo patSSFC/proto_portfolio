@@ -1,0 +1,11 @@
+<div class="form-container signup">
+    <h1>Create your account!</h1>
+    <fieldset>
+        First: <input type="text" name="first" ng-model="vm.user.first">
+        Last: <input type="text" name="last" ng-model="vm.user.last">
+        Username: <input type="text" name="username" ng-model="vm.user.username">
+        Password: <input type="password" name="password" ng-model="vm.user.password">
+        <button type="button" ng-click="vm.createUser()">Create Account</button>
+        <h2 ng-show="vm.error">Error: {{vm.error.message}}. <br>Please <a ng-click="vm.redir()">Sign Up</a> for an account</h2>
+    </fieldset>
+</div>
