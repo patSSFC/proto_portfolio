@@ -4,9 +4,14 @@ angular.module('mainApp').controller( 'skillsCtrl', function($scope, skillsFacto
     vm.data = skillsFactory.data;
     vm.skillsArray = [];
 
+    if (vm.skillsArray.length == 0) {
+      vm.emptyArray = true;
+    };
+
     console.log("loaded skillsCtrl");
 
     vm.createSkill = function() {
+        vm.emptyArray = false;
         console.log("loaded skillsCtrl");
         var new_skill = angular.copy(vm.skill);
         console.log(`the newly added skill is "${new_skill.skillName}`);
