@@ -1,5 +1,5 @@
 angular.module('mainApp').controller('userCtrl', function($scope, $location, userFactory) {
-    var vm = this;
+    const vm = this;
 
     console.log("loaded signupCtrl");
     vm.user=userFactory.user;

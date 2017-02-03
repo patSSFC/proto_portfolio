@@ -14,7 +14,7 @@ angular.module('mainApp', ['ngRoute', 'ngMaterial'])
             })
             .when('/projects', {
                 templateUrl: '../partials/partials.projects.html',
-                controller: 'userCtrl',
+                controller: 'projectCtrl',
                 controllerAs: 'vm'
             })
             .when('/skills', {

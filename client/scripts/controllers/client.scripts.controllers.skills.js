@@ -1,5 +1,5 @@
 angular.module('mainApp').controller( 'skillsCtrl', function($scope, skillsFactory) {
-    var vm = this;
+    const vm = this;
     vm.test = "test";
     vm.data = skillsFactory.data;
 
