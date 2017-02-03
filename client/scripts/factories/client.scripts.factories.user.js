@@ -13,10 +13,13 @@ angular.module('mainApp').factory('userFactory', function($http) {
     factory.findUser = function (data, callback) {
         $http.get('/login/'+ data)
             .then(function(response) {
-                factory.user = response.data.user                callback(response);
+                factory.user = response.data.user;
+                callback(response);
             }, function(err) {
                 callback(err);
             });
     }
+
+    return factory;
 
 });
