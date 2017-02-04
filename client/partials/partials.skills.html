@@ -1,25 +1,17 @@
 <div class="form-container">
+
+  <!-- testing if our vm data is passing through -->
   {{vm.test}}
-  <!-- {{vm.data}} -->
-  <div>
-    <md-autocomplete placeholder="Search for a skill" md-selected-item="selectedItem" md-search-text="searchText" md-items="skill in vm.data" md-item-text="skill.name">
-      <span md-highlight-text="searchText">{{skill.name}}</span>
-    </md-autocomplete>
-    <md-not-found>
-      No matches found.
-    </md-not-found>
-  <div>
+
   <fieldset>
-    Skill:
-    <select name="skillSelect" ng-model="vm.skill.skillName">
-        <option value="">Select a skill</option>
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="javascript">Javascript</option>
-        <option value="angular">Angular</option>
+    <p>Skill:</p>
+    <select required name="skillSelect" ng-model="vm.skill.skillName">
+      <option value="" disabled selected>Select a skill...</option>
+      <option ng-repeat="type in vm.data" value="{{type}}">{{type}}</option>
     </select>
-    Years: <input type="text" name="years" value="" ng-model="vm.skill.years">
-    Stars:
+    <p>Years:</p>
+    <input type="text" name="years" value="" ng-model="vm.skill.years">
+    <p>Stars:</p>
     <select name="stars" ng-model="vm.skill.stars">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -29,4 +21,12 @@
     </select>
     <button type="button" ng-click="vm.createSkill()">Add skill</button>
   </fieldset>
+
+  <div class="mySkills" ng-hide="vm.emptyArray">
+    <p>My Skills</p>
+    <ul class="displayedSkills">
+      <li ng-repeat="skill in vm.skillsArray track by $index">{{skill.skillName}}, {{skill.years}},{{skill.stars}}</li>
+    </ul>
+  </div>
+
 </div>
