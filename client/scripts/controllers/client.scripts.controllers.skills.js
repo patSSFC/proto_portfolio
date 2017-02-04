@@ -1,16 +1,25 @@
-angular.module('mainApp').controller( 'skillsCtrl', function($scope, skillsFactory) {
-    var vm = this;
+angular.module('mainApp').controller( 'skillsCtrl', function($scope, skillsFactory, userFactory) {
+    const vm = this;
     vm.test = "test";
     vm.data = skillsFactory.data;
     vm.skillsArray = [];
+    vm.user = userFactory.user;
+
+    if (vm.skillsArray.length == 0) {
+      vm.emptyArray = true;
+    };
 
     console.log("loaded skillsCtrl");
+
     vm.createSkill = function() {
+        vm.emptyArray = false;
         console.log("loaded skillsCtrl");
-        console.log(vm.skill);
-        skillsFactory.createSkill(vm.skill);
-        vm.skillsArray.push(vm.skill);
-        console.log(vm.skillsArray);
+        var new_skill = angular.copy(vm.skill);
+        // console.log(`the newly added skill is "${new_skill.skillName}`);
+        // console.log(new_skill);
+        skillsFactory.postSkill(new_skill);
+        vm.skillsArray.push(new_skill);
     };
+
     console.log(skillsFactory.data);
 });

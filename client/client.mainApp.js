@@ -1,4 +1,4 @@
-angular.module('mainApp', ['ngRoute', 'ngMaterial'])
+angular.module('mainApp', ['ngRoute'])
     .config(function($routeProvider) {
         console.log("loaded!");
         $routeProvider
@@ -12,9 +12,9 @@ angular.module('mainApp', ['ngRoute', 'ngMaterial'])
                 controller: 'userCtrl',
                 controllerAs: 'vm'
             })
-            .when('/dashboard', {
-                templateUrl: '../partials/partials.dashboard.html',
-                controller: 'userCtrl',
+            .when('/projects', {
+                templateUrl: '../partials/partials.projects.html',
+                controller: 'projectCtrl',
                 controllerAs: 'vm'
             })
             .when('/skills', {
