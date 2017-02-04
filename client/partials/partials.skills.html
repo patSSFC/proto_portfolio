@@ -29,15 +29,11 @@
   <div class="mySkills" ng-hide="vm.emptyArray">
     <h2>My Skills</h2>
     <ul class="displayedSkills">
-<<<<<<< HEAD
       <li ng-repeat="skill in vm.skillsArray track by $index">
-        <p>{{skill.skillName}}</p>
+        <p>{{skill.name}}</p>
         <p>Years of experiece: {{skill.years}}</p>
         <p>Confidence: {{skill.stars}} Stars</p>
       </li>
-=======
-      <li ng-repeat="skill in vm.skillsArray track by $index">{{skill.name}}, {{skill.years}},{{skill.stars}}</li>
->>>>>>> e14fade704b5f0aa7f4bafadf2c87c858708dccd
     </ul>
   </div>
 
