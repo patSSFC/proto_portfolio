@@ -15,5 +15,19 @@ module.exports = {
             user: req.body.user_id
         });
         console.log(newSkill);
+        User.findOne({_id : newSkill.user }, function(err, user) {
+            if(err) {
+                res.status(500).json(err);
+            } else {
+                newSkill.save(function(err) {
+                    if(err) {
+                        res.status(500).json(err);
+                    } else {
+
+                    }
+
+                });
+            }
+        });
     }
 }
