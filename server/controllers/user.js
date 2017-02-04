@@ -26,15 +26,6 @@ module.exports = {
                 }
             }
         });
-        // newUser.save(function(err) {
-        //     if(err) {
-        //         res.status(500).json(err);
-        //     } else {
-        //         if(user) {
-        //
-        //         }
-        //     }
-        // });
     },
     login: function(req, res) {
         console.log("Inside user.login" + req.params.username);

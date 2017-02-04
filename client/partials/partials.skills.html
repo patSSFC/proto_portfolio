@@ -5,27 +5,28 @@
 
   <fieldset>
     <p>Skill:</p>
-    <select required name="skillSelect" ng-model="vm.skill.skillName">
+    <select required name="skillSelect" ng-model="vm.skill.name" value="JavaScript">
       <option value="" disabled selected>Select a skill...</option>
       <option ng-repeat="type in vm.data" value="{{type}}">{{type}}</option>
     </select>
     <p>Years:</p>
-    <input type="text" name="years" value="" ng-model="vm.skill.years">
+    <input type="text" name="years" value="" ng-model="vm.skill.years" value="5">
     <p>Stars:</p>
-    <select name="stars" ng-model="vm.skill.stars">
+    <select name="stars" ng-model="vm.skill.stars" value="5">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
+    <input type="hidden" value="vm.user._id" ng-model="vm.skill.user_id">
     <button type="button" ng-click="vm.createSkill()">Add skill</button>
   </fieldset>
 
   <div class="mySkills" ng-hide="vm.emptyArray">
     <p>My Skills</p>
     <ul class="displayedSkills">
-      <li ng-repeat="skill in vm.skillsArray track by $index">{{skill.skillName}}, {{skill.years}},{{skill.stars}}</li>
+      <li ng-repeat="skill in vm.skillsArray track by $index">{{skill.name}}, {{skill.years}},{{skill.stars}}</li>
     </ul>
   </div>
 
