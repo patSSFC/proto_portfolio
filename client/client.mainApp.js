@@ -3,24 +3,27 @@ angular.module('mainApp', ['ngRoute'])
         console.log("loaded!");
         $routeProvider
             .when('/login', {
-                templateUrl: '../partials/partials.login.html',
+                templateUrl: '../partials/onboard/partials.login.html',
                 controller: 'userCtrl',
                 controllerAs: 'vm'
             })
             .when('/signup', {
-                templateUrl: '../partials/partials.signup.html',
+                templateUrl: '../partials/onboard/partials.signup.html',
                 controller: 'userCtrl',
                 controllerAs: 'vm'
             })
             .when('/projects', {
-                templateUrl: '../partials/partials.projects.html',
+                templateUrl: '../partials/onboard/partials.projects.html',
                 controller: 'projectCtrl',
                 controllerAs: 'vm'
             })
             .when('/skills', {
-              templateUrl: '../partials/partials.skills.html',
+              templateUrl: '../partials/onboard/partials.skills.html',
               controller: 'skillsCtrl',
               controllerAs: 'vm'
+            })
+            .when('/dash', {
+              templateUrl: '../partials/dash/partials.dash.html'
             })
             .otherwise({
                 redirectTo: '/login'
