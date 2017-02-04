@@ -21,5 +21,4 @@ angular.module('mainApp').factory('userFactory', function($http) {
     }
 
     return factory;
-
 });
