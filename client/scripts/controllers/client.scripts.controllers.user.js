@@ -1,5 +1,5 @@
 angular.module('mainApp').controller('userCtrl', function($scope, $location, userFactory) {
-    var vm = this;
+    const vm = this;
 
     console.log("loaded signupCtrl");
     vm.user=userFactory.user;
@@ -18,7 +18,7 @@ angular.module('mainApp').controller('userCtrl', function($scope, $location, use
         console.log(res);
         if(res.status === 200) {
             vm.user = userFactory.user
-            $location.path('/dashboard');
+            $location.path('/skills');
         } else {
             vm.error = res.data;
         }

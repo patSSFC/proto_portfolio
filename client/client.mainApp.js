@@ -12,9 +12,9 @@ angular.module('mainApp', ['ngRoute'])
                 controller: 'userCtrl',
                 controllerAs: 'vm'
             })
-            .when('/dashboard', {
-                templateUrl: '../partials/partials.dashboard.html',
-                controller: 'userCtrl',
+            .when('/projects', {
+                templateUrl: '../partials/partials.projects.html',
+                controller: 'projectCtrl',
                 controllerAs: 'vm'
             })
             .when('/skills', {
