@@ -40,7 +40,7 @@ const UserSchema = new Schema({
         }},
     description: {type: String, maxlength: 250},
     _projects: [{type: Schema.Types.ObjectId, ref: 'Project'}],
-    skills: [{type: String, minlength: 1}],
+    _skills: [{type: Schema.Types.ObjectId, ref: 'Skills'}],
     password: {
         type: String,
         // required: true,

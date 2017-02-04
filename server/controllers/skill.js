@@ -23,7 +23,10 @@ module.exports = {
                     if(err) {
                         res.status(500).json(err);
                     } else {
-
+                        console.log("omg it worked!");
+                        user._skills.push(newSkill);
+                        console.log("here is the skills array \n" + user._skills);
+                        res.status(200).json({data: "Succes", message: "Skill posted to " + user.username})
                     }
 
                 });
