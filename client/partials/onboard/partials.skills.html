@@ -1,7 +1,10 @@
 <div class="form-container">
 
   <!-- testing if our vm data is passing through -->
-  {{vm.test}}
+  <!-- {{vm.test}} -->
+
+  <h2>Please add all of your relevant engineering skills</h2>
+  <p>These skills will be associated to each project you add to your portfolio</p>
 
   <fieldset>
     <p>Skill:</p>
@@ -24,9 +27,13 @@
   </fieldset>
 
   <div class="mySkills" ng-hide="vm.emptyArray">
-    <p>My Skills</p>
+    <h2>My Skills</h2>
     <ul class="displayedSkills">
-      <li ng-repeat="skill in vm.skillsArray track by $index">{{skill.name}}, {{skill.years}},{{skill.stars}}</li>
+      <li ng-repeat="skill in vm.skillsArray track by $index">
+        <p>{{skill.name}}</p>
+        <p>Years of experiece: {{skill.years}}</p>
+        <p>Confidence: {{skill.stars}} Stars</p>
+      </li>
     </ul>
   </div>
 
