@@ -13,7 +13,7 @@
       <option ng-repeat="type in vm.data" value="{{type}}">{{type}}</option>
     </select>
     <p>Years:</p>
-    <input type="text" name="years" value="" ng-model="vm.skill.years" value="5">
+    <input type="text" name="years" ng-model="vm.skill.years">
     <p>Stars:</p>
     <select name="stars" ng-model="vm.skill.stars" value="5">
         <option value="1">1</option>
@@ -22,7 +22,7 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
-    <input type="hidden" value="vm.user._id" ng-model="vm.skill.user_id">
+    <!-- <input type="hidden" ng-value="vm.user._id" ng-model="vm.skill.user_id"> -->
     <button type="button" ng-click="vm.createSkill()">Add skill</button>
   </fieldset>
 
