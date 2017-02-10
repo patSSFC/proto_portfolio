@@ -1,11 +1,15 @@
-body {
-  color: black;
-  font-size: 14px;
-  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-}
+// main colors
+$main-dark: hsl(214, 19%, 29%);
 
-h1 {
-  color: black;
-  font-size: 22px;
-  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+// importing files
+@import 'base/typography';
+
+@import 'layout/portfolio-header';
+
+
+// global declarations
+body {
+  color: $main-dark;
+  font-size: 14px;
+  font-family: $font-stack;
 }
