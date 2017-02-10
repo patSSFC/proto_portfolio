@@ -7,8 +7,11 @@
     Blurb: <textarea name="blurb" rows="8" cols="80" ng-model="vm.project.blurb"></textarea>
     <input type="file" name="photo">
     Contribution: <textarea name="blurb" rows="2" cols="80" ng-model="vm.project.blurb"></textarea>
-    Skills Used: 
-    <!-- {{vm.project.blurb}} -->
-    <!-- Password: <input type="password" name="password" ng-model="vm.user"> -->
-    <button type="button" name="button" ng-click="vm.loginUser()">Login</button>
+    Skills Used:
+    <div class="user-skills">
+        <label ng-repeat="skill in vm.user_skills track by $index" for="{{skill._id}}">
+            <input id="{{skill._id}}" ng-click="vm.logSkills()" type="checkbox" value="{{skill._id}}" ng-model="vm.selected_skills[skill._id]">{{skill.name}}
+        </label>
+    </div>
+    <button type="button" name="button">Add Project</button>
 </fieldset>

@@ -2,7 +2,9 @@ angular.module('mainApp').controller('projectCtrl', function($scope, $location, 
     const vm = this;
 
     vm.user = userFactory.user;
-    vm.createProject = function() {
-
+    vm.user_skills = vm.user._skills;
+    vm.selected_skills = [];
+    vm.logSkills = function() {
+        console.log(vm.selected_skills);
     }
 });

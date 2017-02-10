@@ -29,7 +29,9 @@ module.exports = {
     },
     login: function(req, res) {
         console.log("Inside user.login" + req.params.username);
-        User.findOne({username: req.params.username}, function(err, user) {
+        User.findOne({username: req.params.username})
+        .populate("_skills")
+        .exec(function(err, user) {
             if(err) {
                 res.status(500).json(err);
             } else {
