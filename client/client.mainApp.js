@@ -25,6 +25,9 @@ angular.module('mainApp', ['ngRoute'])
             .when('/dash', {
               templateUrl: '../partials/dash/partials.dash.html'
             })
+            .when('/portfolio', {
+              templateUrl: '../partials/portfolio/partials.portfolio.html'
+            })
             .otherwise({
                 redirectTo: '/login'
             });
