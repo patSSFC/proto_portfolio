@@ -10,7 +10,7 @@
     Skills Used:
     <div class="user-skills">
         <label ng-repeat="skill in vm.user_skills track by $index" for="{{skill._id}}">
-            <input id="{{skill._id}}" ng-click="vm.logSkills()" type="checkbox" value="{{skill._id}}" ng-model="vm.selected_skills[skill._id]">{{skill.name}}
+            <input id="{{skill._id}}" type="checkbox">{{skill.name}}
         </label>
     </div>
     <button type="button" name="button">Add Project</button>

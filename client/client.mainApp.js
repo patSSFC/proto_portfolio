@@ -1,6 +1,5 @@
 angular.module('mainApp', ['ngRoute'])
     .config(function($routeProvider) {
-        console.log("loaded!");
         $routeProvider
             .when('/login', {
                 templateUrl: '../partials/onboard/partials.login.html',

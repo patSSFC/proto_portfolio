@@ -6,5 +6,6 @@ angular.module('mainApp').controller('projectCtrl', function($scope, $location, 
     vm.selected_skills = [];
     vm.logSkills = function() {
         console.log(vm.selected_skills);
+        console.log(typeof(vm.selected_skills[0]));
     }
 });
